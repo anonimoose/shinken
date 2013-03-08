@@ -295,7 +295,7 @@ $('.form_in_dropdown').on('click', function (e) {
                 {{!helper.get_perfometer(pb)}} &nbsp;
               </td> -->
               <td class="no_border opacity_hover shortdesc expand" style="max-width:20px;" onclick="show_detail('{{helper.get_html_id(pb)}}')"><i class="icon-chevron-down" id='show-detail-{{helper.get_html_id(pb)}}'></i> <i class="icon-chevron-up chevron-up" id='hide-detail-{{helper.get_html_id(pb)}}'></i> </td>
-            <tr>
+            
             </table>
           <!-- </div> -->
 
