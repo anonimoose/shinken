@@ -217,10 +217,10 @@ $('.form_in_dropdown').on('click', function (e) {
     %last_output = ''
     %nb_same_output = 0
     %if app.datamgr.get_nb_problems() > 0 and page == 'problems' and app.play_sound:
-    <EMBED src="/static/sound/alert.wav" autostart=true loop=false volume=100 hidden=true>
-      %end
+      <EMBED src="/static/sound/alert.wav" autostart=true loop=false volume=100 hidden=true>
+    %end
 
-      %for pb in pbs:
+    %for pb in pbs:
 
       %if pb.business_impact != imp_level:
       <h3> Business impact: {{!helper.get_business_impact_text(pb)}} </h3>
@@ -291,11 +291,8 @@ $('.form_in_dropdown').on('click', function (e) {
               %if len(graphs) > 0:
               %onmouse_code = 'onmouseover="display_hover_img(\'%s\',\'\');" onmouseout="hide_hover_img();" ' % graphs[0]['img_src']
               %end
-<!--               <td class="perfometer" {{!onmouse_code}}>
-                {{!helper.get_perfometer(pb)}} &nbsp;
-              </td> -->
               <td class="no_border opacity_hover shortdesc expand" style="max-width:20px;" onclick="show_detail('{{helper.get_html_id(pb)}}')"><i class="icon-chevron-down" id='show-detail-{{helper.get_html_id(pb)}}'></i> <i class="icon-chevron-up chevron-up" id='hide-detail-{{helper.get_html_id(pb)}}'></i> </td>
-            
+            </tr>
             </table>
           <!-- </div> -->
 
@@ -362,10 +359,8 @@ $('.form_in_dropdown').on('click', function (e) {
           %end
         </div>
       </div>
-
-
       %end
-    </div>
+</div>
 
     %include pagination_element navi=navi, app=app, page=page, div_class="pagination-right"
 
